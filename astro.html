@@ -1,0 +1,486 @@
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Astrophotography - Jitong Chen</title>
+</head> -->
+
+<style>
+.anchor{
+  display: block;
+  height: 220px; /*same height as header*/
+  margin-top: -220px; /*same height as header*/
+  visibility: hidden;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 750px;
+}
+
+.center_portrait {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+a:link {
+    color: rgba(121, 156, 230, 0.815);
+    text-decoration:none;
+}
+a:visited {
+    color:rgba(121, 156, 230, 0.815);
+}
+a:hover {
+    color: rgb(229, 190, 252);
+}
+a:active {
+    color: red
+}
+
+
+.toggle {
+    margin:0 0 0 0rem;
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1rem;
+}
+
+.toggle input {
+    display: none;
+}
+
+.roundbutton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: #33455e;
+    display: block;
+    transition: all 0.3s;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.roundbutton:before {
+    position: absolute;
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+    display: block;
+    left: 0.0rem;
+    bottom: 0.0rem;
+    background-color: lightgray;
+    transition: all 0.3s;
+}
+
+input:checked + .roundbutton {
+    background-color: #ff6d48a4;
+}
+
+input:checked + .roundbutton:before  {
+    transform: translate(2.0rem, 0);
+}
+
+</style>
+
+
+<div style="background-color: black">
+<!-- <body style="background-color:#000000;"> -->
+
+<h2 align="center" style="color:lightgrey"><span class="STYLE1">Astrophotography</h2>
+<p align="center" style="color:lightgrey"><span class="STYLE1">I regularly update this page with deep sky objects I photographed.</p>
+
+<p align="center"><a href=https://www.cleardarksky.com/c/GrnHkObCAkey.html>
+<img style="max-width:600px;width:100%;opacity:0.8" src="https://www.cleardarksky.com/c/GrnHkObCAcs0.gif?1"></a></p>
+
+<p align="center" style="color:lightgrey" font-size:20px><span class="center_portrait">
+Galaxies
+<br>
+<a href="#M31">M31</a>,&nbsp;
+<a href="#M51">M51</a>,&nbsp;
+<a href="#M64">M64</a>,&nbsp;
+<a href="#M66">M66</a>,&nbsp;
+<a href="#M81">M81</a>,&nbsp;
+<a href="#M101">M101</a>
+<br>
+<a href="#M106">M106</a>,&nbsp;
+<a href="#NGC4725">NGC4725</a>,&nbsp;
+<a href="#NGC5907">NGC5907</a>,&nbsp;
+<a href="#Markarian's_Chain">Markarian's Chain</a>
+</span>
+</p>
+
+<p align="center" style="color:lightgrey" font-size:20px><span class="center_portrait">
+Nebulae
+<br>
+<a href="#California">California</a>,&nbsp;
+<a href="#Cresent">Cresent</a>,&nbsp;
+<a href="#Cygnus_Loop">Cygnus Loop</a>,&nbsp;
+<a href="#M27">Dumbell</a>,&nbsp;
+<a href="#Eastern_Vein">Eastern Veil</a>,&nbsp;
+<a href="#Elephant">Elephant's Trunk</a>
+<br>
+<a href="#Flaming_Star">Flaming Star</a>,&nbsp;
+<a href="#IC1318">Gamma Cygni</a>,&nbsp;
+<a href="#Heart">Heart</a>,&nbsp;
+<a href="#Horsehead">Horsehead</a>,&nbsp;
+<a href="#Jellyfish">Jellyfish</a>
+<br>
+<a href="#SH2-274">Medusa</a>,&nbsp;
+<a href="#Monkey_Head">Monkey Head</a>,&nbsp;
+<a href="#North_America">North America</a>,&nbsp;
+<a href="#Orion">Orion</a>,&nbsp;
+<a href="#Pelican">Pelican</a>
+<br>
+<a href="#Pleiades">Pleiades</a>,&nbsp;
+<a href="#Rosette">Rosette</a>,&nbsp;
+<a href="#Seagull">Seagull</a>,&nbsp;
+<a href="#Soul">Soul</a>
+</span>
+</p>
+
+<p align="center" style="color:lightgrey" font-size:20px><span class="center_portrait">
+Clusters
+<br>
+<a href="#Christmas_Tree">Christmas Tree</a>,&nbsp;
+<a href="#M3">M3</a>,&nbsp;
+<a href="#M13">M13</a>
+<br>
+<p>
+
+<p align="center" style="color:lightgrey" font-size:20px><span class="center_portrait">
+<audio src="music/Voice_of_Eternity_volume.mp3" id="my_audio" loop="loop"></audio>
+<table style="width:5%", align="center">
+  <tr>
+    <th><img src="music/music_symbol.png" width="30" height="40"></th>
+    <th>
+    <label class="toggle">
+    <input id="toggleswitch" type="checkbox">
+    <span class="roundbutton"></span>
+    </label>
+    </th>
+  </tr>
+</table>
+<script type="text/javascript">
+// window.addEventListener("scroll", scroll2play);
+// window.addEventListener("click", click2play);
+// function scroll2play() {
+//     var elementTarget = document.getElementById("Jellyfish");
+//     if (window.scrollY > elementTarget.offsetTop && window.scrollY < (elementTarget.offsetTop + elementTarget.offsetHeight)) {
+//         var audio = document.getElementById("my_audio");
+//         audio.volume = 0.3;
+//         document.getElementById("my_audio").play();
+//     }
+// }
+// function click2play() {
+//     var audio = document.getElementById("my_audio");
+//     audio.volume = 0.3;
+//     document.getElementById("my_audio").play();
+// }
+
+var input =  document.getElementById('toggleswitch');
+input.addEventListener('change',function(){
+    if(this.checked) {
+        // document.getElementById("my_audio").volume = 0.5;
+        document.getElementById("my_audio").play();
+    } else {
+        document.getElementById("my_audio").pause();
+    }
+});
+</script>
+</p>
+
+<span class="anchor" id="Eastern_Veil"></span>
+<p align="center" style="color:lightgrey">NGC6992: Eastern Vein Nebula (HOO)</p>
+<p><img src="photos/NGC6992_East_Veil_HOO.jpeg" alt="Paris" class="center_portrait"></p>
+<br>
+
+<span class="anchor" id="Cygnus_Loop"></span>
+<p align="center" style="color:lightgrey">SH2-103: Cygnus Loop (SHO, stars removed)</p>
+<p><img src="photos/SH2_103_cygnus_loop.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<br>
+<p align="center" style="color:lightgrey">William Optics Zenithstar 73, 430mm, f/5.9</p>
+<p><img src="photos/telescope.jpeg" alt="Paris" class="center_portrait"></p>
+<br>
+
+<br>
+<p align="center" style="color:lightgrey">Sharpstar 94 EDPH, x0.8 reducer, 413mm, f/4.4</p>
+<p><img src="photos/telescope2.jpeg" alt="Paris" class="center_portrait"></p>
+<br>
+
+<br>
+<p align="center" style="color:lightgrey">Celestron C8, x0.63 reducer, 1280mm, f/6.3</p>
+<p><img src="photos/telescope3.jpeg" alt="Paris" class="center_portrait"></p>
+<br>
+
+<span class="anchor" id="Orion"></span>
+<p align="center" style="color:lightgrey">M42: Orion Nebula</p>
+<p><img src="photos/M42_600s.jpeg" alt="Paris" class="center_portrait"></p>
+<br>
+
+<span class="anchor" id="Horsehead"></span>
+<p align="center" style="color:lightgrey">NGC2023: Horsehead Nebula</p>
+<p><img src="photos/NGC2023_horse_head_600s.jpeg" alt="Paris" class="center_portrait"></p>
+<br>
+
+<p align="center" style="color:lightgrey">NGC2023: Horsehead Nebula (mono)</p>
+<p><img src="photos/IC434_horse_head_mono.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="Rosette"></span>
+<p align="center" style="color:lightgrey">NGC2244: Rosette Nebula</p>
+<p><img src="photos/NGC2244_rosette.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<p align="center" style="color:lightgrey">NGC2244: Rosette Nebula (SHO)</p>
+<p><img src="photos/SHO_rosette.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="Jellyfish"></span>
+<p align="center" style="color:lightgrey">IC443: Jellyfish Nebula (SHO)</p>
+<p><img src="photos/IC443_Jellyfish_sho_longer.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<p align="center" style="color:lightgrey">IC443: Jellyfish Nebula (SHO, stars removed)</p>
+<p><img src="photos/IC443_Jellyfish_sho_starless.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<p align="center" style="color:lightgrey">IC443: Jellyfish Nebula (HO)</p>
+<p><img src="photos/IC443_jelly_fish.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="IC1318"></span>
+<p align="center" style="color:lightgrey">IC1318: Gamma Cygni Nebula (SHO)</p>
+<p><img src="photos/IC1318.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="M51"></span>
+<p align="center" style="color:lightgrey">M51: Whirlpool Galaxy (RGB)</p>
+<p><img src="photos/M51_whirlpool_C8.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<p align="center" style="color:lightgrey">M51: Whirlpool Galaxy (RGBH)</p>
+<p><img src="photos/M51_whirlpool.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="M27"></span>
+<p align="center" style="color:lightgrey">M27: Dumbbell Nebula (HOO)</p>
+<p><img src="photos/M27_dumbbell.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="M66"></span>
+<p align="center" style="color:lightgrey">M66 Group: Leo Triplet (RGB)</p>
+<p><img src="photos/M66_leo_triplet.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<p align="center" style="color:lightgrey">M42: Orion Nebula</p>
+<p><img src="photos/M42_C8.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<p align="center" style="color:lightgrey">M42: Oiron Nebula (SHO)</p>
+<p><img src="photos/SHO_M42.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<p align="center" style="color:lightgrey">M42: Oiron Nebula (SHO)</p>
+<p><img src="photos/SHO_M42_v2.jpeg" alt="Paris" class="center_portrait"></p>
+<br>
+
+<p align="center" style="color:lightgrey">NGC2023: Horsehead Nebula</p>
+<p><img src="photos/NGC2023_horse_head.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<p align="center" style="color:lightgrey">NGC6992: Eastern Veil Nebula</p>
+<p><img src="photos/NGC6992_east_veil.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="Pelican"></span>
+<p align="center" style="color:lightgrey">IC5070: Pelican Nebula</p>
+<p><img src="photos/IC5070_pelican_nebula.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="Soul"></span>
+<p align="center" style="color:lightgrey">IC1848: Soul Nebula</p>
+<p><img src="photos/IC1848_soul_nebula.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="Cresent"></span>
+<p align="center" style="color:lightgrey">NGC6888: Cresent Nebula</p>
+<p><img src="photos/NGC6888_cresent_nebula.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<p align="center" style="color:lightgrey">NGC6888: Cresent Nebula (SHO)</p>
+<p><img src="photos/cresent_SHO_C8.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="Flaming_Star"></span>
+<p align="center" style="color:lightgrey">IC405: Flaming Star Nebula</p>
+<p><img src="photos/IC405_flaming_star.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<p align="center" style="color:lightgrey">IC405: Flaming Star Nebula (SHO)</p>
+<p><img src="photos/IC405_SHO.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="North_America"></span>
+<p align="center" style="color:lightgrey">NGC7000: North America Nebula</p>
+<p><img src="photos/NGC7000_north_america.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="Monkey_Head"></span>
+<p align="center" style="color:lightgrey">NGC2174: Monkey Head Nebula</p>
+<p><img src="photos/NGC2174_monkey_head.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="Monkey_Head_SHO"></span>
+<p align="center" style="color:lightgrey">NGC2174: Monkey Head Nebula (SHO)</p>
+<p><img src="photos/NGC2174_monkey_head_sho.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="Pacman"></span>
+<p align="center" style="color:lightgrey">NGC281: Pacman Nebula</p>
+<p><img src="photos/NGC281_pacman.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="Seagull"></span>
+<p align="center" style="color:lightgrey">IC2177: Seagull Nebula</p>
+<p><img src="photos/SHO_seagull.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="Heart"></span>
+<p align="center" style="color:lightgrey">IC1805: Heart Nebula</p>
+<p><img src="photos/IC1805.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="Elephant"></span>
+<p align="center" style="color:lightgrey">IC1396: Elephant's Trunk Nebula</p>
+<p><img src="photos/IC1396.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="Tadpoles"></span>
+<p align="center" style="color:lightgrey">IC410: Tadpoles Nebula</p>
+<p><img src="photos/IC410.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="Pleiades"></span>
+<p align="center" style="color:lightgrey">M45: The Pleiades</p>
+<p><img src="photos/M45.jpeg" alt="Paris" class="center"/></p> 
+<br>
+
+<span class="anchor" id="Christmas_Tree"></span>
+<p align="center" style="color:lightgrey">NGC2264: Christmas Tree Cluster</p>
+<p><img src="photos/NGC2264_christmas_tree.jpeg" alt="Paris" class="center"/></p>
+<br>
+
+<span class="anchor" id="M31"></span>
+<p align="center" style="color:lightgrey">M31: Andromeda Galaxy</p>
+<p><img src="photos/M31.jpeg" alt="Paris" class="center"/></p> 
+<br>
+
+<p align="center" style="color:lightgrey">M42: Orion Nebula</p>
+<p><img src="photos/M42.jpeg" alt="Paris" class="center"/></p> 
+<br>
+
+<span class="anchor" id="California"></span>
+<p align="center" style="color:lightgrey">NGC1499: California Nebula</p>
+<p><img src="photos/NGC1499.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="M101"></span>
+<p align="center" style="color:lightgrey">M101: Pinwheel Galaxy (RGB)</p>
+<p><img src="photos/M101_C8.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<p align="center" style="color:lightgrey">M101: Pinwheel Galaxy (RGBH)</p>
+<p><img src="photos/M101_RGBH.jpeg" alt="Paris" class="center"></p>
+<br>
+
+<span class="anchor" id="M81"></span>
+<p align="center" style="color:lightgrey">M81: Bode's Galaxy</p>
+<p><img src="photos/M81_C8.jpeg" alt="Paris" class="center"/></p>
+<br>
+
+<p align="center" style="color:lightgrey">M81 & M82: Bode's Galaxy & Cigar Galaxy</p>
+<p><img src="photos/M81.jpeg" alt="Paris" class="center"/></p>
+<br>
+
+<span class="anchor" id="M64"></span>
+<p align="center" style="color:lightgrey">M64: Black Eye Galaxy</p>
+<p><img src="photos/blackeye_C8.jpeg" alt="Paris" class="center"/></p>
+<br>
+
+<span class="anchor" id="M106"></span>
+<p align="center" style="color:lightgrey">M106</p>
+<p><img src="photos/M106_C8.jpeg" alt="Paris" class="center"/></p>
+<br>
+
+<p align="center" style="color:lightgrey">M106</p>
+<p><img src="photos/M106.jpeg" alt="Paris" class="center_portrait"/></p>
+<br>
+
+<span class="anchor" id="M13"></span>
+<p align="center" style="color:lightgrey">M13</p>
+<p><img src="photos/M13_C8.jpeg" alt="Paris" class="center"/></p>
+<br>
+
+<span class="anchor" id="M3"></span>
+<p align="center" style="color:lightgrey">M3 (globular cluster)</p>
+<p><img src="photos/M3_RGB.jpeg" alt="Paris" class="center"/></p>
+<br>
+
+<span class="anchor" id="NGC4725"></span>
+<p align="center" style="color:lightgrey">NGC4725</p>
+<p><img src="photos/NGC4725_RGBH.jpeg" alt="Paris" class="center"/></p>
+<br>
+
+<span class="anchor" id="NGC5907"></span>
+<p align="center" style="color:lightgrey">NGC5907</p>
+<p><img src="photos/NGC5907_C8.jpeg" alt="Paris" class="center"/></p>
+<br>
+
+<span class="anchor" id="Markarian's_Chain"></span>
+<p align="center" style="color:lightgrey">NGC4435: Markarian's Chain</p>
+<p><img src="photos/Markarian's_Chain.jpeg" alt="Paris" class="center"/></p>
+<br>
+
+<span class="anchor" id="SH2-274"></span>
+<p align="center" style="color:lightgrey">SH2-274: Medusa Nebula</p>
+<p><img src="photos/medusa.jpeg" alt="Paris" class="center"/></p>
+<br>
+
+<p align="center" style="color:lightgrey">The Moon</p>
+<p><img src="photos/moon.jpeg" alt="Paris" class="center"/></p>
+</div>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<!-- <script type="text/javascript">
+var sc_project=11349241;
+var sc_invisible=1;
+var sc_security="489756db";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="free web stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11349241/0/489756db/1/" alt="free
+web stats"></a></div></noscript> -->
+<!-- End of StatCounter Code for Default Guide -->
+
+<!-- </body> -->

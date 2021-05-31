@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<title>Astrophotography - Jitong Chen</title>
+
+<style>
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 0px solid rgb(74, 74, 78);
+    background-color: #00000067;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align:center;
+    color: white;
+}
+
+/* Style the buttons */
+.tab button {
+    background-color:rgb(62, 62, 70);
+    /*float: left;*/
+    border: medium;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 2px;
+    transition: 0.3s;
+    width: 30%;
+    max-width: 500px;
+    border-bottom: 3px solid transparent;
+    font-size: medium;
+    font-weight: bold;
+    color: lightgrey;
+    font-family: 'Times New Roman';
+}
+/* Background color of buttons on hover */
+.tab button:hover {
+    background-color: rgb(70, 73, 224);
+}
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: rgb(70, 73, 224);
+}
+
+/* sub page styls */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1000px;
+}
+a:link {
+    color: rgb(184, 207, 255);
+}
+a:visited {
+    color:rgb(184, 207, 255);
+}
+a:hover {
+    color: rgb(229, 190, 252);
+}
+a:active {
+    color: red
+}
+</style>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20872900-2']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<body style="background-color:#000000;">
+
+<div class="mainwrapper">
+  <div class="tab" id="js-navigation">
+    <button id="tab1" onclick="openPage(event, '/astro.html')">Astro</button>
+    <button id="tab2" onclick="openPage(event, '/slides.html')">Slideshow</button>
+    <button id="tab3" onclick="openPage(event, '/travel.html')">Travel</button>
+  </div>
+
+  <div id="header"></div>
+  <div id="js-content">
+    <!-- content will be loaded here -->
+  </div>
+</div>
+
+<script src="/js/jquery-1.9.1.js"></script>
+<script>
+  function openPage(evt, dest_link) {
+    evt.preventDefault();
+    $("#js-content").load(dest_link);
+      var tab1 = document.getElementById('tab1')
+      var tab2 = document.getElementById('tab2')
+      var tab3 = document.getElementById('tab3')
+
+      if (tab1.classList.contains("active")) {
+        tab1.classList.remove("active");
+      }
+      if (tab2.classList.contains("active")) {
+        tab2.classList.remove("active");
+      }
+      if (tab3.classList.contains("active")) {
+        tab3.classList.remove("active");
+      }
+      event.srcElement.classList.add("active")
+  } 
+
+  function doesFileExist(urlToFile) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('HEAD', urlToFile, false);
+    xhr.send();
+    if (xhr.status == "404") {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+  $(document).ready(function() {
+    var url = document.location.toString();
+    if (url.match('#')) {
+      var mypage = '/' + url.split('#')[1] + '.html'
+      if(doesFileExist(mypage)){
+        $('#js-content').load(mypage);
+        if (url.split('#')[1] == 'astro'){
+           if (tab1.classList.contains("active")) {tab1.classList.remove("active");}
+           tab1.classList.add("active");
+        }
+        if (url.split('#')[1] == 'slides'){
+           if (tab2.classList.contains("active")) {tab1.classList.remove("active");}
+           tab2.classList.add("active");
+        }
+        if (url.split('#')[1] == 'travel'){
+           if (tab3.classList.contains("active")) {tab1.classList.remove("active");}
+           tab3.classList.add("active");
+        }
+      } else {
+        $('#js-content').load('/astro.html');
+        if (tab1.classList.contains("active")) {tab1.classList.remove("active");}
+        tab1.classList.add("active");
+      }
+    } else {
+      $('#js-content').load('/astro.html');
+      if (tab1.classList.contains("active")) {tab1.classList.remove("active");}
+      tab1.classList.add("active");
+    }
+
+    $('#js-navigation a').click(function(e) {
+      e.preventDefault();
+      $("#js-content").load(e.target.href);
+    })
+  });
+</script>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+  var sc_project=11349241;
+  var sc_invisible=1;
+  var sc_security="489756db";
+  var scJsHost = (("https:" == document.location.protocol) ?
+  "https://secure." : "http://www.");
+  document.write("<sc"+"ript type='text/javascript' src='" +
+  scJsHost+
+  "statcounter.com/counter/counter.js'></"+"script>");
+  </script>
+  <noscript><div class="statcounter"><a title="free web stats"
+  href="http://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="//c.statcounter.com/11349241/0/489756db/1/" alt="free
+web stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+
